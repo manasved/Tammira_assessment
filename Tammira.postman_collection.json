@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "89aa1646-6720-46c1-abdc-fb29fcab3b7e",
+		"name": "Tammira",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Andrew\",\n    \"last_name\": \"H\",\n    \"bio\": \"Fiction Writer\",\n    \"profile_pic_url\": \"https://picsum.photos/id/237/200/300\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Blog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Blog24\",\n    \"subtitle\": \"YOYO\",\n    \"tags\": [\"Funny\", \"info\"],\n    \"author\": {\n    \"first_name\": \"Sakura\",\n    \"last_name\": \"BV\",\n    \"bio\": \"Singer\",\n    \"profile_pic_url\": \"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/118403355_313087380113645_7524156120575272352_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=105&_nc_ohc=EBcxowFpgbMAX9f2YIp&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDyAoD2PkyCKmio-K7UYhAlUTIki5Dt1qxUgUlJKSxDzA&oe=63E88F22&_nc_sid=8fd12b\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fecth Blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/blog?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blog"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch By Tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/blog/tags?tags=funny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blog",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "funny"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Blog By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Blog102\",\n    \"subtitle\": \"Changed3\",\n    \"tags\": [\n        \"Funny\",\n        \"info\",\n        \"hello\",\n        \"cat\"\n    ],\n    \"author\": {\n        \"first_name\": \"Carl\",\n        \"last_name\": \"Y\",\n        \"bio\": \"Singer\",\n        \"profile_pic_url\": \"https://picsum.photos/id/237/200/300\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/blog?id=63e56094e51c8ad9cf885a65",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blog"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "63e56094e51c8ad9cf885a65"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
